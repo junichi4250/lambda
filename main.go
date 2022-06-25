@@ -12,6 +12,7 @@ type MyEvent struct {
 	Name string `json:"Name"`
 }
 
+// 呼び出し
 func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
 	log.Printf("lambda finished! response will be returned!")
 	return fmt.Sprintf("Hello %s!", name.Name), nil
